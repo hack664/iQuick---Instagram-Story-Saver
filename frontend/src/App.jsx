@@ -18,6 +18,22 @@ export default function App() {
     }
   };
 
+  const smoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const element = document.querySelector(targetId);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      setMobileMenuOpen(false);
+    }
+  };
+
   const features = [
     { icon: <Zap className="w-5 h-5" />, text: 'Fastest Story Saver for Instagram' },
     { icon: <Lock className="w-5 h-5" />, text: 'Anonymous Ghost Mode' },
@@ -79,9 +95,9 @@ export default function App() {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-6">
-              <a href="#features" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition">Features</a>
-              <a href="#install" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition">Install</a>
-              <a href="#faq" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition">FAQ</a>
+              <a href="#features" onClick={(e) => smoothScroll(e, '#features')} className="text-sm font-medium text-gray-700 hover:text-blue-600 transition">Features</a>
+              <a href="#install" onClick={(e) => smoothScroll(e, '#install')} className="text-sm font-medium text-gray-700 hover:text-blue-600 transition">Install</a>
+              <a href="#faq" onClick={(e) => smoothScroll(e, '#faq')} className="text-sm font-medium text-gray-700 hover:text-blue-600 transition">FAQ</a>
               <a 
                 href="https://iquick.s3.eu-north-1.amazonaws.com/iquick_official.apk" 
                 download
