@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Download, Shield, Zap, Lock, Package, Film, Check, Menu, X, ChevronDown } from 'lucide-react';
+import { Download, Shield, Zap, Lock, Package, Film, Check, Menu, X, ChevronDown, ArrowUp } from 'lucide-react';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('features');
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const year = new Date().getFullYear();
     document.getElementById('year').textContent = year;
+
+    // Show/hide scroll to top button
+    const handleScroll = () => {
+      setShowScrollTop(window.pageYOffset > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleDownload = () => {
@@ -32,6 +41,13 @@ export default function App() {
       });
       setMobileMenuOpen(false);
     }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   const features = [
@@ -123,9 +139,9 @@ export default function App() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-gray-200 bg-white">
             <nav className="px-4 py-4 space-y-3">
-              <a href="#features" className="block py-2 text-gray-700 hover:text-blue-600 font-medium" onClick={() => setMobileMenuOpen(false)}>Features</a>
-              <a href="#install" className="block py-2 text-gray-700 hover:text-blue-600 font-medium" onClick={() => setMobileMenuOpen(false)}>Install</a>
-              <a href="#faq" className="block py-2 text-gray-700 hover:text-blue-600 font-medium" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
+              <a href="#features" onClick={(e) => smoothScroll(e, '#features')} className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Features</a>
+              <a href="#install" onClick={(e) => smoothScroll(e, '#install')} className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Install</a>
+              <a href="#faq" onClick={(e) => smoothScroll(e, '#faq')} className="block py-2 text-gray-700 hover:text-blue-600 font-medium">FAQ</a>
               <a 
                 href="https://iquick.s3.eu-north-1.amazonaws.com/iquick_official.apk" 
                 download
@@ -360,6 +376,17 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 hover:scale-110 group"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp className="w-6 h-6 group-hover:animate-bounce" />
+        </button>
+      )}
     </div>
   );
 }
