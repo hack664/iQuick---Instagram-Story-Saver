@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Story Saver</title>
+
+  <!-- ====== REQUIRED: Replace these two values before publishing ====== -->
+  <!-- Example: https://iquickofficial.site -->
+  <link rel="canonical" href="https://iquickofficial.site/" />
+  <!-- Full absolute URL to your OG image (1200x630 recommended) -->
+  <meta property="og:image" content="https://iquick.s3.eu-north-1.amazonaws.com/icon.jpg" />
+  <meta name="theme-color" content="#3b82f6" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <!-- use your S3 icon so the favicon won't 404 -->
+  <link rel="icon" href="https://iquick.s3.eu-north-1.amazonaws.com/icon.jpg" />
+  <link rel="apple-touch-icon" href="https://iquick.s3.eu-north-1.amazonaws.com/icon.jpg" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Download iQuick APK – the fastest Instagram Story Saver & Reels Downloader for Android. Save stories, reels, posts and highlights in HD. Free, safe & no login required." />
+  <meta name="keywords" content="iQuick apk, instagram story saver, instagram downloader, reels downloader, story saver android, insta video downloader apk" />
+  <meta name="author" content="iQuick Official" />
+
+  <!-- Social / Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Instagram Story Saver" />
+  <meta property="og:description" content="Save Instagram stories, reels, videos & photos instantly in HD. Free Instagram downloader – no login required." />
+  <meta property="og:url" content="https://iquickofficial.site/" />
+  <meta property="og:site_name" content="iQuick" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="iQuick – Fast Instagram Story Saver - Profile Viewer" />
+  <meta name="twitter:description" content="Download the official iQuick APK to save Instagram stories, reels and videos in HD." />
+  <meta name="twitter:image" content="https://iquick.s3.eu-north-1.amazonaws.com/icon.jpg" />
+
+  <!-- Preconnect & Preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preload hero / critical images and APK for faster LCP/download -->
+  <link rel="preload" href="https://iquick.s3.eu-north-1.amazonaws.com/icon.jpg" as="image" />
+  <!-- APK preload set as fetch (or remove if you prefer) -->
+  <link rel="preload" href="https://iquickofficial.site/apk/iquick-latest.apk" as="fetch" crossorigin />
+
+  <!-- Hreflang (if you later add other locales) -->
+  <link rel="alternate" href="https://iquickofficial.site/" hreflang="en" />
+
+  <!-- ======= Structured Data (JSON-LD) ======= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://iquickofficial.site/#org",
+        "name": "iQuick",
+        "url": "https://iquickofficial.site/",
+        "logo": "https://iquick.s3.eu-north-1.amazonaws.com/icon.jpg",
+        "sameAs": []
+      },
+      {
+        "@type": "MobileApplication",
+        "name": "iQuick",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "Utilities",
+        "url": "https://iquickofficial.site/",
+        "image": "https://iquick.s3.eu-north-1.amazonaws.com/icon.jpg",
+        "description": "Instagram Story saver",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://iquickofficial.site/",
+        "name": "iQuick",
+        "publisher": { "@id": "https://iquickofficial.site/#org" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://iquickofficial.site/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://iquickofficial.site/contactus" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is iQuick safe to use?", "acceptedAnswer": { "@type":"Answer", "text":"Yes — iQuick does not require Instagram login or store Instagram credentials." } },
+      { "@type": "Question", "name": "Do I need an Instagram account?", "acceptedAnswer": { "@type":"Answer", "text":"No — the app downloads publicly available content without logging in." } },
+      { "@type": "Question", "name": "Is downloading legal?", "acceptedAnswer": { "@type":"Answer", "text":"Downloads are for personal use only. Users must comply with Instagram's terms and copyright laws." } }
+    ]
+  }
+  </script>
+
+  <!-- ====== Critical inline CSS (keeps render fast) ====== -->
+  <style>
+    :root{--bg:#ffffff;--primary:#3b82f6;--muted:#556174;--card:#f8fafc;--radius:16px;--maxw:960px}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:#0f172a;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.6}
+    a{color:var(--primary);text-decoration:none}a:focus{outline:3px solid rgba(59,130,246,.25);outline-offset:3px}
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center}
+    .logo {
+      width: 72px;
+      height: 72px;
+      min-width: 72px;   /* prevents shrinking */
+      min-height: 72px;  /* prevents shrinking */
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      flex-shrink: 0;     /* key: keep original size */
+    }
+    .logo img { width: 72px; height: 72px; object-fit: cover; display:block; }
+    h1{font-size:26px;margin:0}
+    .sub{color:var(--muted);margin-top:4px}
+    .hero{margin-top:20px;display:flex;gap:28px;flex-wrap:wrap}
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 16px rgba(0,0,0,.04)}
+    .btn{display:inline-block;padding:14px 22px;background:var(--primary);color:#fff;border-radius:12px;font-weight:600}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px}
+    .feat{background:#fff;padding:14px;border-radius:14px;border:1px solid #e5e7eb;font-weight:500}
+    .screens{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .simg{width:110px;height:220px;border-radius:14px;object-fit:cover}
+    footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:880px){.hero{flex-direction:column}.simg{width:90px;height:180px}}
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:10px;top:10px;width:auto;height:auto;background:#fff;padding:8px;z-index:10000;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+  </style>
+
+</head>
+<body>
+  <a class="skip-link" href="#maincontent">Skip to content</a>
+
+  <main id="maincontent" class="container" role="main">
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <img src="https://iquick.s3.eu-north-1.amazonaws.com/icon.jpg" alt="iQuick App Logo" loading="lazy" width="72" height="72" />
+      </div>
+
+      <div>
+        <h1>iQuick – Instagram Story Saver - Profile Viewer</h1>
+        <p class="sub">Story Saver, video downloader, highlights, Reels & photos instantly in HD – free & no login required.</p>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div style="flex:1;min-width:300px">
+        <article class="card" aria-labelledby="pkg-title">
+          <h2 id="pkg-title" style="margin:0;font-weight:600">Official iQuick • Latest Version</h2>
+          <p class="sub" style="margin:6px 0 16px">Version: <strong>1.2.4</strong> • Size: <strong>12.6 MB</strong> • Updated: <strong>Nov 2025</strong></p>
+
+          <!-- DOWNLOAD BUTTON (absolute link preview) -->
+          <a class="btn" id="downloadBtn" href="https://iquick.s3.eu-north-1.amazonaws.com/iquick_official.apk" download aria-label="Download iQuick">⬇ Download iQuick</a>
+
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap" aria-hidden="true">
+            <span class="feat" style="padding:6px 12px">No Login Required</span>
+            <span class="feat" style="padding:6px 12px">Fast & Secure</span>
+            <span class="feat" style="padding:6px 12px">HD Reels Download</span>
+          </div>
+        </article>
+
+        <h2 style="margin-top:26px">Why Choose iQuick?</h2>
+        <div class="features" aria-hidden="true">
+          <div class="feat">⚡ Fastest Story Saver for Instagram</div>
+          <div class="feat">🔒👻 anonymous ghost </div>
+          <div class="feat">⚡ Batch Download</div>
+          <div class="feat">⚡ Offline Sync</div>
+          <div class="feat">🎬 HD Reels & Video Downloader</div>
+          <div class="feat">🔒 No Instagram Login Needed</div>
+          <div class="feat">📥 1-Tap Downloading</div>
+          <div class="feat">📦 Lightweight (12 MB)</div>
+          <div class="feat">🛡 Safe & Secure</div>
+        </div>
+
+        <h2 style="margin-top:26px">How to Install iQuick</h2>
+        <div class="card" role="article" aria-label="installation">
+          <ol style="margin-left:18px;color:#475569">
+            <li>Tap <strong>Download iQuick</strong>.</li>
+            <li>Enable <strong>Install Unknown Apps</strong> in Android settings.</li>
+            <li>Open the downloaded file and install.</li>
+          </ol>
+        </div>
+
+        <h2 style="margin-top:26px">Frequently Asked Questions</h2>
+        <div class="card" role="region" aria-labelledby="faq-heading">
+          <h3 id="faq-heading" style="margin-top:0">FAQs</h3>
+          <strong>Is iQuick safe?</strong>
+          <p class="sub">Yes, iQuick does not collect login passwords or store Instagram credentials.</p>
+
+          <strong>Can I use iQuick without an Instagram account?</strong>
+          <p class="sub">Yes — downloads work on publicly available content.</p>
+
+          <strong>Is story downloading legal?</strong>
+          <p class="sub">Downloads are for personal use only. Please comply with applicable copyright laws and Instagram terms.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside style="width:320px;min-width:260px">
+        <div class="card" style="text-align:center">
+          <img src="https://iquick.s3.eu-north-1.amazonaws.com/sc_5.jpg" alt="iQuick app interface screenshot" class="simg" loading="lazy" width="110" height="220" />
+          <h3 style="margin-top:10px">App Screenshots</h3>
+          <div class="screens" aria-hidden="true">
+            <img src="https://iquick.s3.eu-north-1.amazonaws.com/sc_2.jpg" alt="iQuick reels downloader UI screenshot" class="simg" loading="lazy" width="110" height="220" />
+            <img src="https://iquick.s3.eu-north-1.amazonaws.com/sc_3.jpg" alt="iQuick story saver screenshot" class="simg" loading="lazy" width="110" height="220" />
+            <img src="https://iquick.s3.eu-north-1.amazonaws.com/sc_4.jpg" alt="iQuick instagram downloader screenshot" class="simg" loading="lazy" width="110" height="220" />
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <p>© <span id="year"></span> iQuick. All rights reserved.</p>
+      <p>
+        <a href="https://sites.google.com/view/iquick-privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+        • <a href="https://sites.google.com/view/iquick-terms-of-use" target="_blank" rel="noopener">Terms of Use</a>
+        • <a href="https://sites.google.com/view/iquickrefundandcancellation" target="_blank" rel="noopener">Refund & Cancellation</a>
+        • <a href="https://sites.google.com/view/iquickcontactus" target="_blank" rel="noopener">Contact Us</a>
+      </p>
+    </footer>
+  </main>
+
+  <!-- Lightweight JS: year + analytics beacon fallback -->
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Download tracking (non-blocking)
+    const dl = document.getElementById("downloadBtn");
+    dl && dl.addEventListener("click", function(){
+      try { navigator.sendBeacon('/api/track', JSON.stringify({event:'download', ts:Date.now()})); } catch(e) { /* silent */ }
+    });
+  </script>
+
+</body>
+</html>
